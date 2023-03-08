@@ -3,9 +3,11 @@ import asyncio
 from discord.ext import commands
 import requests
 import json
+from decouple import config
 
 ############## OpenExchange API ##############
-url = "https://openexchangerates.org/api/latest.json?app_id=cb409233f885447abc258a6bdd2fff47&symbols=JPY,SGD&prettyprint=false&show_alternative=false"
+id = config('OE_API_ID')
+url = f"https://openexchangerates.org/api/latest.json?app_id={id}&symbols=JPY,SGD&prettyprint=false&show_alternative=false"
 headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 
@@ -151,7 +153,8 @@ def runBot():
                                     "**!6480Gems**: converts 6480 Gems to USD\n")
         
 
-    bot.run('MTA4MDgzNDA0Mzg1NzM1MDcyNg.GUE6-P.N8Kun1RoydQ8Gm1veE6gNVerbfFT3NRTi0pvF8')
+    token = config('DISCORD_TOKEN')
+    bot.run(token)
 
 if __name__ == "__main__":
     runBot()
