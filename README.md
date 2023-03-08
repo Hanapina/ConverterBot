@@ -23,4 +23,5 @@ Go to https://openexchangerates.org/ to get your API ID.
 Create a .env file to use with: 
 
 OE_API_ID=YOUR_OE_API_TOKEN 
+
 DISCORD_TOKEN=YOUR_BOT_TOKEN 
