@@ -10,9 +10,9 @@ Life MakeOver ~SEA Vers~ (Gems & SGD)
 
 
 # Commands
-All commands can be displayed via !help 
+All commands can be displayed via **!help** 
 
-'!' is the prefix used for all commands
+**'!'** is the prefix used for all commands
 
 # How to use
 
