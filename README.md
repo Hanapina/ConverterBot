@@ -5,11 +5,13 @@ This is a bot written to convert certain gacha currency's.
 **Currently made for:**
 
 Granblue Fantasy (Mobacoins & Yen)
+
 Life MakeOver ~SEA Vers~ (Gems & SGD)
 
 
 # Commands
 All commands can be displayed via !help 
+
 '!' is the prefix used for all commands
 
 # How to use
