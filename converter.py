@@ -49,8 +49,8 @@ def runBot():
                 val = float(msg.content)
                 val2OE = val / jpy_exchange
                 val2PP = (val / jpy_exchange) * 1.049
-                await message.channel.send("OpenExchangeRate: %s¥ is " % msg.content + "$%.2f\n" % val2OE +
-                                           "Paypal Approx Rate: %s¥ is " % msg.content + "$%.2f" % val2PP)
+                await message.channel.send("OpenExchangeRate: **%s¥** is " % msg.content + "**$%.2f\n**" % val2OE +
+                                           "Paypal Approx Rate: **%s¥** is " % msg.content + "**$%.2f**" % val2PP)
             except ValueError:
                 await message.channel.send("Input is not numerical. Please use command again.")
         except asyncio.TimeoutError:
@@ -60,26 +60,41 @@ def runBot():
     async def _3kMBC(message):
         if message.author == bot.user and message.channel == bot.channel:
             return
-        await message.channel.send("3150¥ or 3k Mobacoins is:\n"
-                                   "OpenExchange: $%.2f\n" % three_thousand_mc_usd + 
-                                   "PayPal Estimate: $%.2f" % (three_thousand_mc_usd * 1.049))
+        await message.channel.send("**3150¥** or 3k Mobacoins is:\n"
+                                   "OpenExchange: **$%.2f**\n" % three_thousand_mc_usd + 
+                                   "PayPal Estimate: **$%.2f**" % (three_thousand_mc_usd * 1.049))
 
     @bot.command(name='10kMBC')
     async def _10kMBC(message):
         if message.author == bot.user and message.channel == bot.channel:
             return
-        await message.channel.send("10500¥ or 10k Mobacoins is:\n"
-                                   "OpenExchange: $%.2f\n" % ten_thousand_mc_usd + 
-                                   "PayPal Estimate: $%.2f" % (ten_thousand_mc_usd * 1.049))
+        await message.channel.send("**10500¥** or **10k** Mobacoins is:\n"
+                                   "OpenExchange: **$%.2f**\n" % ten_thousand_mc_usd + 
+                                   "PayPal Estimate: **$%.2f**" % (ten_thousand_mc_usd * 1.049))
 
     @bot.command(name='30kMBC')
     async def _30kMBC(message):
         if message.author == bot.user and message.channel == bot.channel:
             return
-        await message.channel.send("31500¥ or 30k Mobacoins is:\n"
-                                   "OpenExchange: $%.2f\n" % thirty_thousand_mc_usd +
-                                   "PayPal Estimate: $%.2f" % (thirty_thousand_mc_usd * 1.049))
+        await message.channel.send("**31500¥** or **30k** Mobacoins is:\n"
+                                   "OpenExchange: **$%.2f**\n" % thirty_thousand_mc_usd +
+                                   "PayPal Estimate: **$%.2f**" % (thirty_thousand_mc_usd * 1.049))
+        
+    @bot.command(name='listAllMb')
+    async def listAllMb(message):
+        if message.author == bot.user and message.channel == bot.channel:
+            return
+        await message.channel.send("**3150¥** or **3k Mobacoins** is:\n"
+                                   "OpenExchange: **$%.2f**\n" % three_thousand_mc_usd + 
+                                   "PayPal Estimate: **$%.2f**\n\n" % (three_thousand_mc_usd * 1.049) + 
 
+                                   "**10500¥** or **10k Mobacoins** is:\n"
+                                   "OpenExchange: **$%.2f**\n" % ten_thousand_mc_usd + 
+                                   "PayPal Estimate: **$%.2f**\n\n" % (ten_thousand_mc_usd * 1.049) + 
+
+                                   "**31500¥** or **30k Mobacoins** is:\n"
+                                   "OpenExchange: **$%.2f**\n" % thirty_thousand_mc_usd +
+                                   "PayPal Estimate: **$%.2f**" % (thirty_thousand_mc_usd * 1.049))
 
     ### Life MakeOver ###
     @bot.command(name="sgdConvert")
