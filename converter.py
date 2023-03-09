@@ -159,6 +159,7 @@ def runBot():
                                     "**!help**: gives a list of commands that the bot can do.\n"
                                     "**!jpyConvert**: use to convert ¥ to USD\n"
                                     "**!sgdConvert**: use to convert specific SGD to USD\n"
+                                    "**!listAllMb**: lists all MB functions currently set by the bot.\n"
                                     "**!3kMBC**: converts 3k Mobacoins to USD.\n"
                                     "**!10kMBC**: converts 10k Mobacoins to USD.\n"
                                     "**!30kMBC**: converts 30k Mobacoins to USD.\n"
